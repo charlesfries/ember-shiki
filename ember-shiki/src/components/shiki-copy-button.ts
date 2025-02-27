@@ -3,13 +3,13 @@ import { tracked } from '@glimmer/tracking';
 
 import { task, timeout } from 'ember-concurrency';
 
-export interface CopyButtonSignature {
+export interface ShikiCopyButtonSignature {
   Args: {
     text: string;
   };
 }
 
-export default class CopyButton extends Component<CopyButtonSignature> {
+export default class ShikiCopyButton extends Component<ShikiCopyButtonSignature> {
   @tracked showCopied = false;
 
   loadLanguageTask = task(async () => {
